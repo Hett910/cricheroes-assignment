@@ -40,6 +40,7 @@ assignment/
 │   │   ├── format.js # Formatting utilities
 │   │   └── __tests__/ # Unit tests
 │   ├── public/       # Static assets
+│   ├── screenshots/  # Application screenshots
 │   └── package.json  # Frontend dependencies
 ├── backend/          # Express.js API server
 │   ├── src/
@@ -50,7 +51,7 @@ assignment/
 │   │   ├── lib/         # Utility libraries
 │   │   ├── routes/      # API routes
 │   │   ├── data/        # Static data
-|   |   ├── screenshots/ # Images (report)   
+│   │   ├── screenshots/ # Test coverage reports
 │   │   └── tests/       # Test files
 │   └── package.json # Backend dependencies
 └── README.md        # This file
@@ -112,6 +113,14 @@ assignment/
    - Runs scored (if batting first) or runs to chase (if bowling first)
 4. **Compute Scenario**: Click the button to calculate the required performance
 5. **Review Results**: See the runs needed and NRR impact
+
+### Screenshots
+
+![Application Home Screen](./frontend/screenshots/Screen.png)
+
+![Input and Output Interface](./frontend/screenshots/InputAndOutPut.png)
+
+![Scenario Output Results](./frontend/screenshots/OutputScenario.png)
 
 ## API Endpoints
 
