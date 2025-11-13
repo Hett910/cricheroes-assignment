@@ -2,6 +2,7 @@ import { BALLS_PER_OVER, ballsToOversDecimal } from "./cricketMath.js";
 import { simulateMatch } from "./matchSimulator.js";
 import { findTeamStanding, sortStandings } from "./standings.js";
 
+// Simulates a match by updating team stats, recalculating NRR, sorting standings, and returning updated team and table details.
 export function findRestrictionRange(config) {
   const totalBalls = config.totalOvers * BALLS_PER_OVER;
   let minRuns = null;
@@ -52,6 +53,7 @@ export function findRestrictionRange(config) {
   return { minRuns, maxRuns, minNrr, maxNrr };
 }
 
+// This function figures out how fast a team must chase a target (in overs) and what NRR they would have to achieve a specific rank in the league table. It does this by simulating every possible outcome and finding the boundaries
 export function findChaseRange(config) {
   const totalBalls = config.totalOvers * BALLS_PER_OVER;
   let minBalls = null;

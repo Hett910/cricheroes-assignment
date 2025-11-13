@@ -1,4 +1,4 @@
-// src/controllers/cricketController.js
+
 import { z } from "zod";
 import { getTeamsService, calculateScenarioService } from "../services/cricketService.js"; // ✅ Correct path
 
@@ -31,7 +31,7 @@ export const calculateScenario = (req, res) => {
   }
 
   try {
-    const result = calculateScenarioService(parsed.data); // ✅ All logic handled in service
+    const result = calculateScenarioService(parsed.data);
     res.json(result);
   } catch (error) {
     const message =

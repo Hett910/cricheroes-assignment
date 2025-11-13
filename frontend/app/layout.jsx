@@ -8,7 +8,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "NRR Scenario Planner",
+  title: "Cricheroes NRR Scenario Planner",
   description:
     "Plan cricket net run rate scenarios using the IPL 2022 sample points table.",
 };
@@ -16,12 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${poppins.variable} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${poppins.variable} antialiased`}>{children}</body>
     </html>
   );
 }
-

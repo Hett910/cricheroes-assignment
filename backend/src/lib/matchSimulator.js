@@ -6,6 +6,7 @@ import {
   sortStandings,
 } from "./standings.js";
 
+// Determines match outcome as win, loss, or tie based on team runs and chasing status
 function resolveOutcome(detail, your, opponent) {
   if (detail.yourRuns > detail.opponentRuns) {
     return "your-win";
@@ -22,6 +23,8 @@ function resolveOutcome(detail, your, opponent) {
   return "tie";
 }
 
+
+// Updates team statistics (won, lost, points) based on the match outcome.
 function updateResultStats(outcome, your, opponent) {
   switch (outcome) {
     case "your-win":
@@ -43,6 +46,7 @@ function updateResultStats(outcome, your, opponent) {
   }
 }
 
+// Simulates a match by updating team stats, recalculating NRR, sorting standings, and returning updated team and table details.
 export function simulateMatch(detail) {
   const base = loadBaseStandings();
   const standings = cloneStandings(base);

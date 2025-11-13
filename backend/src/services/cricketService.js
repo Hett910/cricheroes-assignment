@@ -1,6 +1,7 @@
 import { loadBaseStandings } from "../lib/standings.js";
 import { findRestrictionRange, findChaseRange } from "../lib/scenarioSearch.js";
 
+// Retrieves the list of teams along with their current standings from the base points table.
 export const getTeamsService = () => {
   const standings = loadBaseStandings();
   return standings.map((team) => ({
@@ -13,6 +14,7 @@ export const getTeamsService = () => {
   }));
 };
 
+// Calculates the scenario based on the given parameters. e.g whether batting first or bowling first, and finds the required runs/overs and NRR ranges to achieve the desired league position.
 export const calculateScenarioService = (data) => {
   const { yourTeam, opponentTeam, totalOvers, desiredPosition, toss, runs } = data;
   if (toss === "batting-first") {

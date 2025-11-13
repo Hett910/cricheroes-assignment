@@ -22,6 +22,7 @@ describe("cricketService", () => {
     jest.clearAllMocks();
   });
 
+  // Test suite for getTeamsService
   describe("getTeamsService", () => {
     it("returns simplified team data from standings", () => {
       mockLoadBaseStandings.mockReturnValue([
@@ -53,6 +54,7 @@ describe("cricketService", () => {
     });
   });
 
+  // Test suite for calculateScenarioService
   describe("calculateScenarioService", () => {
     const basePayload = {
       yourTeam: "Team A",

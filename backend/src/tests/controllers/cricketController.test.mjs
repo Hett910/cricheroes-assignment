@@ -1,7 +1,7 @@
 // tests/controllers/cricketController.test.mjs
 import { jest } from "@jest/globals";
 
-// ✅ Mock the services module (this replaces the real implementation)
+// Mock the services module (this replaces the real implementation)
 const mockGetTeamsService = jest.fn();
 const mockCalculateScenarioService = jest.fn();
 
@@ -10,11 +10,12 @@ jest.unstable_mockModule("../../services/cricketService.js", () => ({
   calculateScenarioService: mockCalculateScenarioService,
 }));
 
-// ✅ Import controller AFTER mock registration
+// Import controller AFTER mock registration
 const { getTeams, calculateScenario } = await import(
   "../../controllers/cricketController.js"
 );
 
+// Test suite for cricketController
 describe("cricketController", () => {
   beforeEach(() => {
     jest.clearAllMocks();

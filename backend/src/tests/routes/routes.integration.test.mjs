@@ -2,6 +2,7 @@
 import request from "supertest";
 import app from "../../app.js";
 
+// Integration tests for API routes
 describe("API routes (integration)", () => {
   it("GET /api/teams returns teams list", async () => {
     const res = await request(app).get("/api/teams");
@@ -32,6 +33,7 @@ describe("API routes (integration)", () => {
   });
 });
 
+// Basic integration test for app health route
 describe('App integration', () => {
   it('should return 404 for unknown routes', async () => {
     const res = await request(app).get('/unknown');
